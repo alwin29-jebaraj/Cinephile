@@ -10,7 +10,7 @@ const API_KEY_STORAGE_KEY = "tmdb_api_key";
 const BASE_URL = "https://api.themoviedb.org/3";
 
 export function getStoredApiKey(): string {
-  return localStorage.getItem(API_KEY_STORAGE_KEY) || "";
+  return localStorage.getItem(API_KEY_STORAGE_KEY) || ((import.meta as any).env?.VITE_TMDB_API_KEY as string) || "";
 }
 
 export function setStoredApiKey(key: string): void {

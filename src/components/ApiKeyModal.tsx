@@ -80,7 +80,7 @@ export default function ApiKeyModal({ isOpen, onClose, onKeySaved }: ApiKeyModal
             {currentKey ? (
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/15 text-emerald-400">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                Live TMDB API
+                {!localStorage.getItem("tmdb_api_key") && (import.meta as any).env?.VITE_TMDB_API_KEY ? "Auto Integrated (Env)" : "Custom User Key"}
               </span>
             ) : (
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-cinema-red/15 text-cinema-red">
