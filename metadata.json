@@ -1,0 +1,6 @@
+{
+  "name": "Movie App",
+  "description": "A feature-rich movie browsing app with TMDB API integration, search, pagination, and favorites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
